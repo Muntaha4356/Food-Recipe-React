@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.searchBar{
+    padding: 1.2rem;
+}
+.searchBar input{
+    margin: 0.7rem;
+    height: 1.9rem;
+    border-radius: 2.5rem;
+    padding: 0.9rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.searchBar input:hover{
+    box-shadow: 0 6px 6px  #d6960d1a, 0 4px 4px rgba(219, 180, 3, 0.06);
+}
+.searchBar .button2{
+    margin: 0.7rem;
+    height: 1.9rem;
+    border-radius: 2rem;
+    border: none;
+    text-align: center;
+    background-color: rgb(250, 228, 187);
+    border: none;
+    outline: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: absolute;
+    left:40px ;
+}
+.searchBar .button1{
+    margin: 0.7rem;
+    height: 1.9rem;
+    width: 4rem;
+    border-radius: 2rem;
+    /* padding: 0.9rem; */
+    text-align: center;
+    background-color: rgb(250, 228, 187);
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.searchBar button:hover{
+    background-color:hsl(39, 86%, 90%) ;
+    box-shadow: none;
+}
+/* .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+} */
+ .meals{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    
+ }
+ .view-recipe{
+    cursor: pointer;
+ }
+.meal-card{
+    text-align: center;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius:0.8rem ;
+    position: relative;
+    margin: 0.5rem;
+    
+}
+.meal-card img{
+    max-height: 300px;
+    max-width: 100%;
+    border-radius:1.2rem ;
+    position: relative;
+   
+}
+.icon{
+    position: absolute;
+    top:14px;
+    z-index: 10000;
+    right: 14px;
+    font-size: 1.9rem;
+    color: hsl(0, 100%, 56%);
+    /* border: red 1px solid; */
+    transition:  2s ease-in;
+    cursor: pointer;
+
+}
+.icon:hover{
+    color: hsl(0, 100%, 50%);
+    content: "\f458"
+}
+/* .onclick{ */
+    /* border:  solid red 1px;
+    z-index: 100000;
+
+} */
+.meal-card p{
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: hsl(39, 100%, 86%);
+    margin-top: 0px;
+    
+}
+.meal-card button{
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+    text-align: center;
+    border-radius: 0.9rem;
+    border: none;
+    background-color: hsl(39, 100%, 80%) ;
+    margin: 0.2rem;  
+}
+.ingred-container{
+    margin-top:1.4rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 2.3fr;
+    background-color:  hsl(39, 100%, 90%);
+    box-sizing: border-box;
+    /* flex-wrap: wrap;
+    box-sizing: border-box; */
+}
+.meal-info{
+    background-color:  hsl(39, 100%, 90%);
+}
+.ingred-imag{
+    min-height: 550px;
+    box-sizing: border-box;
+    margin: 2rem 0rem;
+}
+.ingred-imag img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3rem 0 0 3rem;
+  padding: 0rem 1rem;
+  box-sizing: border-box;
+}
+.ingred-recipe{
+    margin: 2rem 1rem;
+    padding: 0.7rem;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.7rem;
+    background-color:  hsl(39, 100%, 80%);
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: hsl(34, 57%, 30%);
+}
+.ingred-recipe ul{
+    list-style-type: none;
+}
+::selection {
+    background: hsl(39, 100%, 75%);
+    color: white; 
+}
+::-moz-selection {
+    background: hsl(39, 100%, 80%);
+    color: white;
+}
+.cooking{
+    margin: 2rem 0rem;
+    padding:  0.7rem;
+    box-sizing: border-box;
+    background-color:  hsl(39, 100%, 80%);
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.7rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: hsl(34, 57%, 30%);
+    line-gap-override: 0.1rem;
+}
+.cooking p{
+    margin: 1rem 0rem;
+}
+.iteminfav{
+    border: 1px solid transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 1rem;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: hsl(34, 78%, 97%);
+    /* width: 60%; */
+}
+.iconcross{
+        position: absolute;
+        top:14px;
+        z-index: 10000;
+        right: 14px;
+        font-size: 1rem;
+        border: none;
+        transition:  2s ease-in;
+        border-radius: 50%;
+        cursor: pointer;
+}
+.upper-fav{
+    
+    margin: 2rem;
+    padding: 0.3rem 1rem;
+}
+.upper-fav .home{
+    text-decoration: none;
+    color: hsl(34, 57%, 30%);
+    font-weight: 900;
+    font-size: larger;
+    font-family:  'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+.upper-meal{
+    margin-top: 1rem;
+    padding-left: 2rem;
+    color: hsl(34, 57%, 30%);
+    font-weight: 900;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.home1{
+    color: hsl(34, 57%, 30%);
+    text-decoration: none;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.icon-yt{
+    position: absolute;
+    top:320px;
+    z-index: 10000;
+    right: 14px;
+    font-size: 1.9rem;
+    color: hsl(0, 100%, 56%);
+    /* border: red 1px solid; */
+    transition:  2s ease-in;
+    cursor: pointer;
+} 
+.yt-video{
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(60, 56%, 98%);
+    padding: 3rem;
+}
+
+/* For menu bar */
+.bodymenu{
+    font-family:Helvetica, sans-serif;
+    /* background-color: #23242a; */
+    /* min-height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+}
+.dropdown{
+    min-width: 5em;
+    position: relative;
+    margin: 2em;
+
+}
+.dropdown *{
+    box-sizing: border-box;
+}
+.select{
+    background: #2a2f3b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    /* margin-bottom: 0; */
+    cursor: pointer;
+    transition: background 0.3;
+}
+.select-clicked{
+    border: 2px #264890 solid;
+    box-shadow: 0 0 0.8em #26489a;
+
+}
+.select:hover{
+    background: #323741;
+}
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+.caret-rotate{
+    transform: rotate(180deg);
+}
+.menu{
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 2.4em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    margin-top: 0rem;
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+.menu li{
+    padding: 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+
+}
+.menu li:hover{
+    background: #2a2d35;
+}
+.active{
+    background-color: #23232a;
+}
+.menu-open{
+    display: block;
+    opacity: 1;
+    
+}
+
+
+/* THE REVIEW PAGE */
+.body-review{
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px red;
+    margin-top: 5rem;
+    flex-direction: column;
+}
+.warning{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+.input-fields{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+}
+.Name-entry{
+    width: 250%;
+    height: 2rem;
+    padding: 0.7rem;
+    margin: 1.2rem;
+    border: hsl(39, 100%, 75%)  1px solid;
+    outline: none;
+}
+.reviewentry{
+    width: 250%;
+    height: 6rem;
+    padding: 0.7rem;
+    margin: 1.2rem;
+    text-align: start;
+    font-family: sans-serif;
+    /* outline: ; */
+    border: hsl(39, 100%, 75%)  1px solid;
+    outline: none;
+}
